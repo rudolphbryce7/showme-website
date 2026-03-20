@@ -1,0 +1,1900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Me Mobile Blasting | Dustless Blasting Columbia MO</title>
+    <meta name="description" content="Professional mobile dustless blasting services in Columbia, Missouri. Eco-friendly surface prep for metal, wood, masonry, fiberglass. Serving the Midwest.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --white: #ffffff;
+            --off-white: #f7f7f7;
+            --light-gray: #eeeeee;
+            --border: #e0e0e0;
+            --mid-gray: #999999;
+            --dark-gray: #555555;
+            --dark: #333333;
+            --black: #1a1a1a;
+            --accent: #4a7a3a;
+            --accent-dark: #3a6130;
+            --accent-light: #5a9448;
+            --overlay-dark: rgba(0,0,0,0.65);
+            --font-display: 'Rajdhani', sans-serif;
+            --font-body: 'Nunito Sans', sans-serif;
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--dark-gray);
+            background: var(--white);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        /* ====== TOP BAR ====== */
+        .top-bar {
+            background: var(--black);
+            padding: 8px 0;
+            font-size: 0.85rem;
+            color: #ccc;
+        }
+
+        .top-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-bar a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .top-bar a:hover { color: var(--white); }
+
+        .top-bar-right {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .top-bar-right a {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .top-bar-right svg {
+            width: 14px;
+            height: 14px;
+            fill: currentColor;
+        }
+
+        /* ====== NAVIGATION ====== */
+        .nav {
+            background: var(--white);
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+        }
+
+        .nav .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+        }
+
+        .nav-logo {
+            font-family: var(--font-display);
+            font-size: 1.6rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--black);
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .nav-logo span { color: var(--accent); }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 0;
+            align-items: center;
+        }
+
+        .nav-links li a {
+            font-family: var(--font-display);
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--dark);
+            text-decoration: none;
+            padding: 28px 18px;
+            display: block;
+            transition: color 0.3s, background 0.3s;
+            border-bottom: 3px solid transparent;
+        }
+
+        .nav-links li a:hover {
+            color: var(--accent);
+            border-bottom-color: var(--accent);
+        }
+
+        .nav-cta {
+            background: var(--accent) !important;
+            color: var(--white) !important;
+            padding: 12px 24px !important;
+            border: none !important;
+            font-weight: 700 !important;
+            letter-spacing: 1px !important;
+            transition: background 0.3s !important;
+        }
+
+        .nav-cta:hover {
+            background: var(--accent-dark) !important;
+            border-bottom-color: transparent !important;
+        }
+
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        .nav-toggle span {
+            width: 26px;
+            height: 2px;
+            background: var(--dark);
+            transition: all 0.3s;
+        }
+
+        /* ====== HERO ====== */
+        .hero {
+            position: relative;
+            height: 85vh;
+            min-height: 550px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero-video-wrap {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+
+        .hero-video-wrap video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%) brightness(0.45);
+        }
+
+        .hero-video-placeholder {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-video-placeholder span {
+            font-family: var(--font-display);
+            font-size: 1rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #555;
+            border: 1px dashed #444;
+            padding: 16px 32px;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.55);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 0 30px;
+        }
+
+        .hero-content h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--white);
+            line-height: 1.15;
+            margin-bottom: 16px;
+            letter-spacing: 1px;
+        }
+
+        .hero-content h1 span { color: var(--accent-light); }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 28px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            font-family: var(--font-display);
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 14px 32px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+        }
+
+        .btn-accent {
+            background: var(--accent);
+            color: var(--white);
+        }
+
+        .btn-accent:hover {
+            background: var(--accent-dark);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 15px rgba(74,122,58,0.3);
+        }
+
+        .btn-white {
+            background: var(--white);
+            color: var(--dark);
+        }
+
+        .btn-white:hover {
+            background: var(--off-white);
+            transform: translateY(-1px);
+        }
+
+        /* ====== SECTION STYLES ====== */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-dark {
+            background: var(--off-white);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-family: var(--font-display);
+            font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--black);
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .section-header h2 span { color: var(--accent); }
+
+        .section-header p {
+            font-size: 1.05rem;
+            color: var(--mid-gray);
+            max-width: 620px;
+            margin: 0 auto;
+        }
+
+        .section-divider {
+            width: 60px;
+            height: 3px;
+            background: var(--accent);
+            margin: 12px auto 16px;
+        }
+
+        /* ====== QUOTE FORM (below hero) ====== */
+        .quote-section {
+            position: relative;
+            background: var(--black);
+            padding: 60px 0;
+            overflow: hidden;
+        }
+
+        .quote-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--accent);
+        }
+
+        .quote-inner {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .quote-text h2 {
+            font-family: var(--font-display);
+            font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--white);
+            line-height: 1.15;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+        }
+
+        .quote-text h2 span { color: var(--accent-light); }
+
+        .quote-text p {
+            font-size: 1.05rem;
+            color: rgba(255,255,255,0.65);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .quote-perks {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .quote-perks li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .quote-perks li svg {
+            width: 18px;
+            height: 18px;
+            fill: var(--accent-light);
+            flex-shrink: 0;
+        }
+
+        .quote-form-wrap {
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 36px;
+        }
+
+        .quote-form-wrap h3 {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--white);
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .quote-form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .quote-form .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .quote-form input,
+        .quote-form textarea,
+        .quote-form select {
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            padding: 13px 16px;
+            border: 1px solid rgba(255,255,255,0.15);
+            background: rgba(255,255,255,0.08);
+            color: var(--white);
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .quote-form input::placeholder,
+        .quote-form textarea::placeholder { color: rgba(255,255,255,0.4); }
+
+        .quote-form input:focus,
+        .quote-form textarea:focus,
+        .quote-form select:focus { border-color: var(--accent-light); }
+
+        .quote-form select {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23999' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 14px center;
+        }
+
+        .quote-form select option {
+            background: var(--black);
+            color: var(--white);
+        }
+
+        .quote-form textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .photo-upload {
+            border: 2px dashed rgba(255,255,255,0.2);
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: border-color 0.3s, background 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .photo-upload:hover {
+            border-color: var(--accent-light);
+            background: rgba(255,255,255,0.04);
+        }
+
+        .photo-upload-text {
+            font-family: var(--font-display);
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: rgba(255,255,255,0.7);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .photo-upload-text em {
+            font-style: normal;
+            font-weight: 400;
+            text-transform: none;
+            letter-spacing: 0;
+            color: rgba(255,255,255,0.35);
+        }
+
+        .photo-upload-hint {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.3);
+        }
+
+        .photo-file-names {
+            font-size: 0.8rem;
+            color: var(--accent-light);
+            padding: 8px 0;
+            line-height: 1.5;
+        }
+
+        .quote-form .btn {
+            width: 100%;
+            justify-content: center;
+            font-size: 1.05rem;
+            padding: 15px 32px;
+        }
+
+        /* ====== STATS BAR ====== */
+        .stats-bar {
+            background: var(--accent);
+            padding: 40px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-family: var(--font-display);
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--white);
+            line-height: 1;
+        }
+
+        .stat-item p {
+            font-family: var(--font-display);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: rgba(255,255,255,0.8);
+            margin-top: 4px;
+        }
+
+        /* ====== SERVICES ====== */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .service-card {
+            text-align: center;
+            padding: 36px 20px;
+            background: var(--white);
+            border: 1px solid var(--border);
+            transition: all 0.3s;
+        }
+
+        .section-dark .service-card {
+            background: var(--white);
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border-color: var(--accent);
+        }
+
+        .service-card svg {
+            width: 52px;
+            height: 52px;
+            color: var(--accent);
+            margin-bottom: 16px;
+        }
+
+        .service-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--black);
+            margin-bottom: 10px;
+            letter-spacing: 0.5px;
+        }
+
+        .service-card p {
+            font-size: 0.9rem;
+            color: var(--mid-gray);
+            line-height: 1.6;
+        }
+
+        /* ====== ABOUT (side-by-side) ====== */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .about-text h2 {
+            font-family: var(--font-display);
+            font-size: clamp(1.8rem, 3vw, 2.4rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--black);
+            margin-bottom: 8px;
+        }
+
+        .about-text h2 span { color: var(--accent); }
+
+        .about-text .divider-left {
+            width: 60px;
+            height: 3px;
+            background: var(--accent);
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            margin-bottom: 16px;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        .about-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .about-feature {
+            font-family: var(--font-display);
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 8px 16px;
+            border: 2px solid var(--accent);
+            color: var(--accent);
+        }
+
+        /* ====== PROCESS ====== */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            text-align: center;
+        }
+
+        .process-step {
+            position: relative;
+        }
+
+        .step-num {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--white);
+            background: var(--accent);
+            border-radius: 50%;
+        }
+
+        .process-step h3 {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--black);
+            margin-bottom: 10px;
+        }
+
+        .process-step p {
+            font-size: 0.9rem;
+            color: var(--mid-gray);
+            max-width: 280px;
+            margin: 0 auto;
+        }
+
+        /* ====== GALLERY ====== */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            padding: 20px;
+            color: var(--white);
+            font-family: var(--font-display);
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s;
+        }
+
+        .gallery-item:hover .gallery-label {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ====== WHAT WE BLAST ====== */
+        .blast-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .blast-col h3 {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .blast-col ul {
+            list-style: none;
+        }
+
+        .blast-col li {
+            padding: 8px 0;
+            border-bottom: 1px solid var(--light-gray);
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .blast-col li::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        /* ====== TESTIMONIALS ====== */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            padding: 32px;
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '\201C';
+            font-family: Georgia, serif;
+            font-size: 4rem;
+            color: var(--accent);
+            opacity: 0.2;
+            position: absolute;
+            top: 8px;
+            left: 16px;
+            line-height: 1;
+        }
+
+        .testimonial-stars {
+            display: flex;
+            gap: 3px;
+            margin-bottom: 14px;
+        }
+
+        .testimonial-stars svg {
+            width: 16px;
+            height: 16px;
+            fill: #f5a623;
+        }
+
+        .testimonial-card blockquote {
+            font-size: 0.9rem;
+            font-style: italic;
+            color: var(--dark-gray);
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+
+        .testimonial-author {
+            font-family: var(--font-display);
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--black);
+            text-transform: uppercase;
+        }
+
+        .testimonial-role {
+            font-size: 0.8rem;
+            color: var(--mid-gray);
+        }
+
+        /* ====== SERVICE AREA ====== */
+        .area-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .area-text h2 {
+            font-family: var(--font-display);
+            font-size: clamp(1.8rem, 3vw, 2.4rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--black);
+            margin-bottom: 8px;
+        }
+
+        .area-text h2 span { color: var(--accent); }
+
+        .area-text .divider-left {
+            width: 60px;
+            height: 3px;
+            background: var(--accent);
+            margin-bottom: 20px;
+        }
+
+        .area-text p {
+            margin-bottom: 16px;
+            line-height: 1.8;
+        }
+
+        .area-locations {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 24px;
+        }
+
+        .area-loc {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95rem;
+        }
+
+        .area-loc svg {
+            width: 14px;
+            height: 14px;
+            fill: var(--accent);
+            flex-shrink: 0;
+        }
+
+        .area-map {
+            background: var(--white);
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .area-map svg {
+            width: 100%;
+            height: auto;
+        }
+
+        .area-map .state {
+            fill: var(--light-gray);
+            stroke: var(--white);
+            stroke-width: 1.5;
+            transition: fill 0.3s;
+        }
+
+        .area-map .state-surrounding {
+            fill: var(--accent-light);
+            opacity: 0.4;
+        }
+
+        .area-map .state-mo {
+            fill: var(--accent);
+        }
+
+        .area-map .map-label {
+            font-family: var(--font-display);
+            font-size: 7px;
+            font-weight: 700;
+            fill: var(--white);
+            text-anchor: middle;
+            letter-spacing: 1px;
+            pointer-events: none;
+        }
+
+        .area-map .map-label-dark {
+            fill: var(--dark-gray);
+            font-size: 6px;
+            font-weight: 600;
+            opacity: 0.7;
+        }
+
+        .area-map .map-pin {
+            fill: #cc2222;
+            filter: drop-shadow(0 1px 2px rgba(0,0,0,0.3));
+        }
+
+        .area-map .map-legend {
+            font-family: var(--font-display);
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--mid-gray);
+            text-align: center;
+            margin-top: 12px;
+        }
+
+        /* ====== CTA BANNER ====== */
+        .cta-banner {
+            background: var(--accent);
+            padding: 70px 0;
+            text-align: center;
+        }
+
+        .cta-banner h2 {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--white);
+            margin-bottom: 10px;
+        }
+
+        .cta-banner p {
+            font-size: 1.05rem;
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 24px;
+        }
+
+        .cta-phone {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 20px;
+            transition: opacity 0.3s;
+        }
+
+        .cta-phone:hover { opacity: 0.85; }
+
+        .btn-dark {
+            background: var(--black);
+            color: var(--white);
+        }
+
+        .btn-dark:hover {
+            background: #111;
+            transform: translateY(-1px);
+        }
+
+        /* ====== CONTACT ====== */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .contact-info h3 {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--black);
+            margin-bottom: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            margin-bottom: 22px;
+        }
+
+        .contact-item svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--accent);
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        .contact-item-text {
+            font-size: 0.95rem;
+            color: var(--dark-gray);
+            line-height: 1.5;
+        }
+
+        .contact-item-text a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .contact-item-text a:hover { text-decoration: underline; }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form select {
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            padding: 13px 16px;
+            border: 1px solid var(--border);
+            background: var(--white);
+            color: var(--dark);
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder { color: #aaa; }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus,
+        .contact-form select:focus { border-color: var(--accent); }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 110px;
+        }
+
+        .contact-form select {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23999' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 14px center;
+        }
+
+        /* ====== FOOTER ====== */
+        .footer {
+            background: var(--black);
+            color: #aaa;
+            padding: 50px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h3 {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--white);
+            margin-bottom: 12px;
+        }
+
+        .footer-brand h3 span { color: var(--accent); }
+
+        .footer-brand p {
+            font-size: 0.85rem;
+            line-height: 1.7;
+        }
+
+        .footer h4 {
+            font-family: var(--font-display);
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--white);
+            margin-bottom: 16px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li { margin-bottom: 8px; }
+
+        .footer-links a {
+            font-size: 0.85rem;
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover { color: var(--accent); }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+        }
+
+        .footer-bottom a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .footer-social a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s;
+            display: inline-flex;
+        }
+
+        .footer-social a:hover { color: var(--accent); }
+
+        .footer-social svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        /* ====== SCROLL REVEAL ====== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ====== RESPONSIVE ====== */
+        @media (max-width: 1024px) {
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .footer-brand { grid-column: span 2; }
+        }
+
+        @media (max-width: 768px) {
+            .top-bar { display: none; }
+
+            .nav-links {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background: rgba(255,255,255,0.98);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 0;
+                z-index: 999;
+            }
+
+            .nav-links.active { display: flex; }
+
+            .nav-links li a {
+                font-size: 1.3rem;
+                padding: 16px;
+                border-bottom: none;
+            }
+
+            .nav-toggle {
+                display: flex;
+                z-index: 1001;
+            }
+
+            .nav-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+            .nav-toggle.active span:nth-child(2) { opacity: 0; }
+            .nav-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+            .hero { height: 70vh; min-height: 450px; }
+            .hero-content h1 { font-size: clamp(1.8rem, 7vw, 3rem); }
+
+            .about-grid,
+            .area-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .quote-inner { grid-template-columns: 1fr; gap: 30px; }
+            .quote-form .form-row { grid-template-columns: 1fr; }
+            .quote-form-wrap { padding: 24px; }
+
+            .services-grid { grid-template-columns: 1fr; }
+            .process-grid { grid-template-columns: 1fr; gap: 36px; }
+            .testimonials-grid { grid-template-columns: 1fr; }
+            .blast-grid { grid-template-columns: 1fr; }
+            .gallery-grid { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: 1fr 1fr; }
+
+            .footer-grid { grid-template-columns: 1fr; }
+            .footer-brand { grid-column: span 1; }
+            .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
+        }
+
+        @media (max-width: 480px) {
+            .stats-grid { grid-template-columns: 1fr; }
+            .area-locations { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ====== TOP BAR ====== -->
+    <div class="top-bar">
+        <div class="container">
+            <span>Columbia, MO &mdash; Serving the Entire Midwest</span>
+            <div class="top-bar-right">
+                <a href="mailto:Eran@showmemobileblasting.com">
+                    <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    Eran@showmemobileblasting.com
+                </a>
+                <a href="tel:5738082771">
+                    <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.24 1.02l-2.2 2.2z"/></svg>
+                    (573) 808-2771
+                </a>
+                <a href="https://www.facebook.com/ShowMeMobileBlasting/" target="_blank" aria-label="Facebook">
+                    <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ====== NAV ====== -->
+    <nav class="nav" id="nav">
+        <div class="container">
+            <a href="#" class="nav-logo">Show Me <span>Mobile Blasting</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#services" onclick="closeMenu()">Services</a></li>
+                <li><a href="#process" onclick="closeMenu()">Process</a></li>
+                <li><a href="#about" onclick="closeMenu()">About</a></li>
+                <li><a href="#gallery" onclick="closeMenu()">Our Work</a></li>
+                <li><a href="#area" onclick="closeMenu()">Areas</a></li>
+                <li><a href="#contact" onclick="closeMenu()" class="nav-cta">Get a Quote</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ====== HERO ====== -->
+    <section class="hero">
+        <div class="hero-video-wrap">
+            <video src="WebsiteTopVideo.mp4" autoplay muted loop playsinline></video>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Mobile Dustless Blasting<br><span>That Comes To You</span></h1>
+            <p>Eco-friendly surface prep for metal, wood, masonry, and fiberglass. No mess, no dust, no compromise. Serving Columbia, MO and the entire Midwest.</p>
+            <div class="hero-btns">
+                <a href="#quote" class="btn btn-accent">Get Free Estimate</a>
+                <a href="tel:5738082771" class="btn btn-white">Call (573) 808-2771</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== FREE QUOTE FORM ====== -->
+    <section class="quote-section" id="quote">
+        <div class="container">
+            <div class="quote-inner">
+                <div class="quote-text reveal">
+                    <h2>Get a <span>Free Quote</span></h2>
+                    <p>Tell us what you need blasted and we'll get back to you fast &mdash; usually within 30 minutes. No pressure, no obligation, just straight answers.</p>
+                    <ul class="quote-perks">
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            100% Free Estimates
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            Fast Response — Usually Within 30 Min
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            We Come to You — Fully Mobile
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            Eco-Friendly Dustless Process
+                        </li>
+                    </ul>
+                </div>
+                <div class="quote-form-wrap reveal">
+                    <h3>Request Your Free Estimate</h3>
+                    <form class="quote-form" onsubmit="handleQuote(event)">
+                        <div class="form-row">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                            <input type="tel" name="phone" placeholder="Phone Number" required>
+                        </div>
+                        <input type="email" name="email" placeholder="Email Address">
+                        <select name="service" required>
+                            <option value="" disabled selected>What do you need blasted?</option>
+                            <option value="automotive">Automotive / Trailer</option>
+                            <option value="residential">Residential</option>
+                            <option value="commercial">Commercial / Industrial</option>
+                            <option value="marine">Marine</option>
+                            <option value="farm">Farm / Heavy Equipment</option>
+                            <option value="other">Other / Not Sure</option>
+                        </select>
+                        <textarea name="message" placeholder="Brief description — material, size, location, etc."></textarea>
+                        <div class="photo-upload" onclick="document.getElementById('quotePhotos').click()">
+                            <svg viewBox="0 0 24 24" width="28" height="28"><path fill="rgba(255,255,255,0.4)" d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+                            <span class="photo-upload-text">Add Photos <em>(optional)</em></span>
+                            <span class="photo-upload-hint">Tap to upload photos of your project</span>
+                            <input type="file" id="quotePhotos" name="photos" multiple accept="image/*" style="display:none" onchange="showFileNames(this)">
+                        </div>
+                        <div id="photoFileNames" class="photo-file-names" style="display:none"></div>
+                        <button type="submit" class="btn btn-accent">Get My Free Quote →</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== STATS BAR ====== -->
+    <div class="stats-bar">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item reveal">
+                    <h3>500+</h3>
+                    <p>Projects Completed</p>
+                </div>
+                <div class="stat-item reveal">
+                    <h3>100%</h3>
+                    <p>Mobile Service</p>
+                </div>
+                <div class="stat-item reveal">
+                    <h3>0%</h3>
+                    <p>Dust &amp; Mess</p>
+                </div>
+                <div class="stat-item reveal">
+                    <h3>ECO</h3>
+                    <p>Friendly Process</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ====== SERVICES ====== -->
+    <section class="section section-dark" id="services">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Our <span>Services</span></h2>
+                <div class="section-divider"></div>
+                <p>From farm equipment to classic cars, residential to commercial &mdash; if it needs stripping, we handle it.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="6" y="12" width="36" height="24" rx="2"/><path d="M16 36v4M32 36v4M12 36h24"/><circle cx="24" cy="24" r="4"/>
+                    </svg>
+                    <h3>Automotive &amp; Trailer</h3>
+                    <p>Classic car restoration, trailer refurbishing, fleet vehicle maintenance. We strip paint, rust, and undercoating without warping panels.</p>
+                </div>
+                <div class="service-card reveal">
+                    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M8 40V20l16-12 16 12v20H8z"/><rect x="18" y="28" width="12" height="12"/><path d="M18 28h12"/>
+                    </svg>
+                    <h3>Commercial &amp; Residential</h3>
+                    <p>Building facades, concrete surfaces, brick restoration, graffiti removal. Gentle enough for historic structures, powerful enough for industrial.</p>
+                </div>
+                <div class="service-card reveal">
+                    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M10 38V18h8v20M20 38V10h8v28M30 38V22h8v16"/><line x1="6" y1="38" x2="42" y2="38"/>
+                    </svg>
+                    <h3>Industrial &amp; Farm</h3>
+                    <p>Heavy equipment, tractors, implements, structural steel, tanks, and piping. We restore surfaces to bare metal for proper recoating.</p>
+                </div>
+                <div class="service-card reveal">
+                    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M24 4C14 4 6 14 8 24c2 10 10 16 16 20 6-4 14-10 16-20 2-10-6-20-16-20z"/><circle cx="24" cy="22" r="6"/>
+                    </svg>
+                    <h3>Marine</h3>
+                    <p>Boat hulls, pontoons, dock structures, marine hardware. Remove antifouling paint, oxidation, and corrosion safely near waterways.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== ABOUT ====== -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image reveal">
+                    <img src="Screenshot 2026-03-20 130628.png" alt="Trailer before and after dustless blasting">
+                </div>
+                <div class="about-text reveal">
+                    <h2>Built For The <span>Tough Jobs</span></h2>
+                    <div class="divider-left"></div>
+                    <p>Show Me Mobile Blasting delivers professional dustless blasting services across the Midwest. We come to your location with our equipment, saving you the hassle and expense of transporting your project.</p>
+                    <p>Our process combines water and recycled glass media at high pressure to strip paint, rust, corrosion, and coatings without the harmful dust clouds of traditional sandblasting. It's faster, safer, and better for the environment.</p>
+                    <div class="about-features">
+                        <div class="about-feature">No Dust</div>
+                        <div class="about-feature">No Warping</div>
+                        <div class="about-feature">Eco-Friendly</div>
+                        <div class="about-feature">We Come To You</div>
+                        <div class="about-feature">Any Surface</div>
+                        <div class="about-feature">Fast Turnaround</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== PROCESS ====== -->
+    <section class="section section-dark" id="process">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>How It <span>Works</span></h2>
+                <div class="section-divider"></div>
+                <p>We make surface prep painless. Here's how the process works.</p>
+            </div>
+            <div class="process-grid">
+                <div class="process-step reveal">
+                    <div class="step-num">1</div>
+                    <h3>Request a Quote</h3>
+                    <p>Call us or fill out the form. Tell us about your project &mdash; what material, what condition, what you need done. We'll provide a fast, free estimate.</p>
+                </div>
+                <div class="process-step reveal">
+                    <div class="step-num">2</div>
+                    <h3>We Come to You</h3>
+                    <p>Our mobile rig shows up at your location fully equipped. No need to transport heavy items or rent space. We set up, blast, and clean up on site.</p>
+                </div>
+                <div class="process-step reveal">
+                    <div class="step-num">3</div>
+                    <h3>Clean, Raw Surface</h3>
+                    <p>Your surface is stripped to bare material, clean and ready for its next coat or finish. No dust, no damage, no mess left behind.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== GALLERY ====== -->
+    <section class="section" id="gallery">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Our <span>Work</span></h2>
+                <div class="section-divider"></div>
+                <p>Before &amp; after results that speak for themselves.</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item reveal">
+                    <img src="Screenshot 2026-03-20 130628.png" alt="Trailer before and after dustless blasting">
+                    <div class="gallery-label">Trailer Restoration</div>
+                </div>
+                <div class="gallery-item reveal">
+                    <img src="Screenshot 2026-03-20 130644.png" alt="Brick wall before and after paint removal">
+                    <div class="gallery-label">Brick Restoration</div>
+                </div>
+                <div class="gallery-item reveal">
+                    <img src="Screenshot 2026-03-20 130654.png" alt="Stone monument before and after cleaning">
+                    <div class="gallery-label">Monument Cleaning</div>
+                </div>
+                <div class="gallery-item reveal">
+                    <img src="Screenshot 2026-03-20 130716.png" alt="Steel beam before and after blasting">
+                    <div class="gallery-label">Steel Beam Prep</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== WHAT WE BLAST ====== -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>What We <span>Blast</span></h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="blast-grid">
+                <div class="blast-col reveal">
+                    <h3>Automotive &amp; Residential</h3>
+                    <ul>
+                        <li>Classic car bodies &amp; frames</li>
+                        <li>Trailers &amp; fleet vehicles</li>
+                        <li>Wheels &amp; rims</li>
+                        <li>Patio furniture &amp; metal fixtures</li>
+                        <li>Wrought iron fences &amp; gates</li>
+                        <li>Decks &amp; wood surfaces</li>
+                        <li>Pool cages &amp; enclosures</li>
+                    </ul>
+                </div>
+                <div class="blast-col reveal">
+                    <h3>Commercial, Industrial &amp; Marine</h3>
+                    <ul>
+                        <li>Building facades &amp; brick restoration</li>
+                        <li>Concrete surfaces &amp; graffiti removal</li>
+                        <li>Heavy equipment &amp; farm implements</li>
+                        <li>Structural steel, tanks &amp; piping</li>
+                        <li>Tractors &amp; agricultural machinery</li>
+                        <li>Boat hulls &amp; pontoons</li>
+                        <li>Dock structures &amp; marine hardware</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== TESTIMONIALS ====== -->
+    <section class="section" id="testimonials">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>What Clients <span>Say</span></h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-stars">
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <blockquote>"Called Eran on a Monday, he was out at our farm by Wednesday. Stripped 30 years of rust and paint off our grain trailer in a few hours. Thing looked brand new. No dust, no mess."</blockquote>
+                    <p class="testimonial-author">Mike R.</p>
+                    <p class="testimonial-role">Farm Owner &mdash; Boone County, MO</p>
+                </div>
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-stars">
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <blockquote>"We had three old boats that needed hull work. Show Me came to the marina, set up, and had all three done in a day and a half. Way cleaner than traditional sandblasting."</blockquote>
+                    <p class="testimonial-author">Sarah T.</p>
+                    <p class="testimonial-role">Marina Manager &mdash; Lake of the Ozarks</p>
+                </div>
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-stars">
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <blockquote>"Used them for a commercial building restoration downtown. They stripped decades of paint off the brick facade without damaging a thing. Professional, on time, fair price."</blockquote>
+                    <p class="testimonial-author">David K.</p>
+                    <p class="testimonial-role">Property Developer &mdash; Columbia, MO</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== SERVICE AREA ====== -->
+    <section class="section section-dark" id="area">
+        <div class="container">
+            <div class="area-grid">
+                <div class="area-text reveal">
+                    <h2>We Come <span>To You</span></h2>
+                    <div class="divider-left"></div>
+                    <p>Based in Columbia, Missouri, we serve the entire Midwest region. Our mobile rig shows up at your location fully equipped &mdash; no need to transport heavy items or rent space.</p>
+                    <p>For larger commercial and industrial jobs, we regularly travel to Kansas City, St. Louis, Springfield, Lake of the Ozarks, and even out of state.</p>
+                    <div class="area-locations">
+                        <div class="area-loc">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
+                            Columbia
+                        </div>
+                        <div class="area-loc">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
+                            Jefferson City
+                        </div>
+                        <div class="area-loc">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
+                            Kansas City
+                        </div>
+                        <div class="area-loc">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
+                            St. Louis
+                        </div>
+                        <div class="area-loc">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
+                            Springfield
+                        </div>
+                        <div class="area-loc">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
+                            Sedalia
+                        </div>
+                        <div class="area-loc">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
+                            Lake of the Ozarks
+                        </div>
+                        <div class="area-loc">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
+                            Out of State
+                        </div>
+                    </div>
+                </div>
+                <div class="area-map reveal">
+                    <div>
+                        <svg viewBox="255 100 490 380" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Background states (context) -->
+                            <path class="state" d="M 380.03242,320.96457 L 384.93566,234.63961 L 271.5471,221.99565 L 259.33328,309.93481 L 380.03242,320.96457 z"/><!-- CO -->
+                            <path class="state" d="M 476.44687,204.02465 L 476.39942,203.44378 L 473.50371,198.59834 L 475.36394,193.88623 L 476.85667,187.99969 L 474.0748,185.91998 L 473.68964,183.17652 L 474.48204,180.62217 L 477.67055,180.63738 L 477.54747,175.63124 L 477.21417,145.45699 L 476.59644,141.68941 L 472.52412,138.35848 L 471.54149,136.68152 L 471.47899,135.0727 L 473.50111,133.5433 L 475.03333,131.87763 L 475.27829,129.22084 L 417.0212,127.62049 L 362.22199,124.1714 L 356.89672,187.86259 L 371.48699,188.76639 L 391.43684,189.972 L 409.17989,190.90059 L 432.95665,192.20417 L 444.93935,191.77953 L 446.90565,194.02471 L 452.10029,197.27806 L 452.86418,198.00081 L 457.40562,196.548 L 463.94616,195.93309 L 465.62146,197.26936 L 469.82597,198.86549 L 472.77103,200.50132 L 473.17001,201.98513 L 474.2095,204.22601 L 476.44687,204.02465 z"/><!-- SD -->
+                            <path class="state" d="M 475.23781,128.82439 L 474.78056,120.36535 L 472.95158,113.04943 L 471.1226,99.560705 L 470.66535,89.729927 L 468.83637,86.300584 L 467.23601,81.270889 L 467.23601,70.982869 L 467.92187,67.096282 L 466.10094,61.644615 L 496.23336,61.679886 L 496.55668,53.435202 L 497.20332,53.273541 L 499.46657,53.758523 L 501.40649,54.566825 L 502.21479,60.063281 L 503.66974,66.206379 L 505.28634,67.822984 L 510.13616,67.822984 L 510.45948,69.277928 L 516.76424,69.601249 L 516.76424,71.702835 L 521.61405,71.702835 L 521.93737,70.409551 L 523.06899,69.277928 L 525.33224,68.631286 L 526.62552,69.601249 L 529.53541,69.601249 L 533.41526,72.187816 L 538.75006,74.612723 L 541.17497,75.097705 L 541.65995,74.127742 L 543.11489,73.64276 L 543.59987,76.552649 L 546.18644,77.845933 L 546.67142,77.360951 L 547.96471,77.522612 L 547.96471,79.624198 L 550.55127,80.594161 L 553.62282,80.594161 L 555.23943,79.785858 L 558.47264,76.552649 L 561.0592,76.067668 L 561.86751,77.845933 L 562.35249,79.139216 L 563.32245,79.139216 L 564.29241,78.330914 L 573.18374,78.007593 L 574.962,81.079142 L 575.60865,81.079142 L 576.32226,79.994863 L 580.76217,79.624198 L 580.15007,81.903657 L 576.21135,83.740782 L 566.96557,87.80191 L 562.19083,89.808807 L 559.11928,92.395375 L 556.69437,95.951905 L 554.43113,99.831756 L 552.65286,100.64006 L 548.12637,105.65153 L 546.83308,105.81319 L 542.5053,108.57031 L 540.04242,111.77542 L 539.8138,114.96681 L 539.90816,123.01016 L 538.53212,124.69891 L 533.45058,128.45888 L 531.2205,134.44129 L 534.09225,136.675 L 534.77214,139.90198 L 532.9169,143.14091 L 533.08769,146.88893 L 533.45655,153.61933 L 536.4848,156.62132 L 539.8138,156.62132 L 541.70491,159.75392 L 545.08408,160.25719 L 548.94324,165.92866 L 556.03053,170.04541 L 558.17368,172.92053 L 558.84483,179.36004 L 477.63333,180.50483 L 477.29541,144.82798 L 476.83817,141.85589 L 472.72296,138.42655 L 471.57984,136.59757 L 471.57984,134.9972 L 473.63744,133.39685 L 475.00918,132.02511 L 475.23781,128.82439 z"/><!-- MN -->
+                            <path class="state" d="M 615.06589,197.36866 L 614.99915,194.21124 L 613.82004,189.68474 L 613.1734,183.54165 L 612.04178,181.11674 L 613.01174,178.04519 L 613.82004,175.1353 L 615.27499,172.54874 L 614.62834,169.15387 L 613.9817,165.59734 L 614.46668,163.81907 L 616.40661,161.39416 L 616.56827,158.64593 L 615.75997,157.35265 L 616.40661,154.76608 L 615.95409,150.59537 L 618.70232,144.93726 L 621.61221,138.14752 L 621.77387,135.88427 L 621.45055,134.91431 L 620.64224,135.39929 L 616.43907,141.70405 L 613.69084,145.74556 L 611.75092,147.52383 L 610.94262,149.78707 L 608.98767,150.59537 L 607.85605,152.5353 L 606.4011,152.21198 L 606.23944,150.43371 L 607.53273,148.00881 L 609.63431,143.32065 L 611.41258,141.70405 L 612.40341,139.3462 L 609.84296,137.44486 L 607.86814,127.07787 L 604.32067,125.73589 L 602.37441,123.42756 L 590.2447,120.70592 L 587.36881,119.69387 L 579.15569,117.52658 L 571.23777,116.36783 L 567.47261,111.23716 L 566.72221,111.79117 L 565.5243,111.62951 L 564.87765,110.49789 L 563.54364,110.79444 L 562.41201,110.9561 L 560.63375,111.92606 L 559.66378,111.27942 L 560.31043,109.33949 L 562.25035,106.26794 L 563.38197,105.13632 L 561.44205,103.68138 L 559.34046,104.48968 L 556.43057,106.4296 L 548.99419,109.66281 L 546.0843,110.30945 L 543.17442,109.82447 L 542.19269,108.94622 L 540.07599,111.7814 L 539.84737,114.52487 L 539.84737,122.9839 L 538.70425,124.58427 L 533.44593,128.47084 L 531.15971,134.41503 L 531.61695,134.64365 L 534.1318,136.70126 L 534.81766,139.90198 L 532.98868,143.10269 L 532.98868,146.98928 L 533.44593,153.61933 L 536.41802,156.59143 L 539.84737,156.59143 L 541.67635,159.79215 L 545.10568,160.24939 L 548.99227,165.96496 L 556.07957,170.08017 L 558.13717,172.82364 L 559.05167,180.25388 L 559.73753,183.5689 L 562.02376,185.16926 L 562.25238,186.541 L 560.19478,189.97033 L 560.4234,193.17106 L 562.93825,197.05764 L 565.4531,198.20075 L 568.42519,198.65799 L 569.76753,200.03811 L 615.06589,197.36866 z"/><!-- WI -->
+                            <path class="state" d="M 619.56954,299.97132 L 619.63482,297.11274 L 620.11981,292.58623 L 622.38305,289.67635 L 624.16133,285.79648 L 626.74789,281.59331 L 626.26291,275.77352 L 624.48465,273.02529 L 624.16133,269.79208 L 624.96963,264.29561 L 624.48465,257.3442 L 623.19135,241.33979 L 621.89807,225.98203 L 620.9276,214.26201 L 623.99866,215.15152 L 625.45361,216.12148 L 626.58523,215.79816 L 628.68682,213.85824 L 631.51639,212.24125 L 636.60919,212.07921 L 658.59506,209.81595 L 664.17079,209.28279 L 665.67393,225.239 L 669.92528,262.08055 L 670.52374,267.85215 L 670.15224,270.1154 L 671.38022,271.91077 L 671.47661,273.28332 L 668.95532,274.88283 L 665.41589,276.43414 L 662.21376,276.98442 L 661.6153,281.85135 L 657.04061,285.16382 L 654.24419,289.17426 L 654.56751,291.55099 L 653.98617,293.08519 L 650.6597,293.08519 L 649.07417,291.46859 L 646.58086,292.73079 L 643.8979,294.23393 L 644.05957,297.28838 L 642.86578,297.54641 L 642.3979,296.52827 L 640.23102,295.02513 L 636.9807,296.36661 L 635.42939,299.37286 L 633.99155,298.56456 L 632.5366,296.96505 L 628.07226,297.45004 L 622.47943,298.42 L 619.56954,299.97132 z"/><!-- IN -->
+                            <path class="state" d="M 631.55882,459.34458 L 631.30456,460.60073 L 626.13142,460.60073 L 624.67648,459.79243 L 622.57489,459.46911 L 615.78515,461.40903 L 614.00689,460.60073 L 611.42032,464.8039 L 610.31778,465.58192 L 609.19395,463.09394 L 608.05083,459.20735 L 604.6215,456.00664 L 605.7646,450.46209 L 605.07874,449.5476 L 603.24976,449.77622 L 595.33184,450.64959 L 570.78534,451.02296 L 570.0156,448.7976 L 570.88897,440.4208 L 574.00581,434.74799 L 579.23288,425.60309 L 578.78714,423.17049 L 580.024,422.51424 L 580.45987,420.59477 L 578.14239,418.51579 L 578.02727,416.37431 L 576.19155,412.25322 L 576.08255,406.29045 L 577.41008,403.80948 L 577.18678,400.39373 L 575.41729,397.31114 L 576.94371,395.82893 L 575.3731,393.32939 L 575.83035,391.67718 L 577.40775,385.15081 L 579.8937,383.11446 L 579.25203,380.74749 L 582.91,375.44496 L 585.74186,374.08854 L 585.52089,372.41338 L 585.23276,370.73228 L 588.10882,365.16461 L 590.45454,363.9331 L 590.60617,363.04009 L 627.94965,359.15892 L 628.13451,365.44225 L 628.29617,382.09331 L 627.48787,413.13216 L 627.32621,427.19665 L 630.07445,445.94929 L 631.55882,459.34458 z"/><!-- MS -->
+
+                            <!-- Surrounding states (served - lighter green) -->
+                            <path class="state state-surrounding" d="M 486.09787,240.70058 L 489.32848,247.72049 L 489.19985,250.02301 L 492.65907,255.51689 L 495.37836,258.66923 L 490.32888,258.66923 L 446.84632,257.73055 L 406.05946,256.84025 L 383.80724,256.05638 L 384.88001,234.72853 L 352.56177,231.80828 L 356.9056,187.79842 L 372.45193,188.82723 L 392.57072,189.97033 L 410.40329,191.11345 L 434.18005,192.25656 L 444.92531,191.79932 L 446.98291,194.08554 L 451.78399,197.05764 L 452.9271,197.97213 L 457.27093,196.60039 L 461.15752,196.14315 L 463.90099,195.91452 L 465.72997,197.28626 L 469.7874,198.88662 L 472.75949,200.48698 L 473.21674,202.08734 L 474.13123,204.14494 L 475.96021,204.14494 L 476.75819,204.19111 L 477.65242,208.87293 L 480.57268,217.34085 L 481.14521,221.09756 L 483.6687,224.87181 L 484.23829,229.98595 L 485.84553,234.22632 L 486.09787,240.70058 z"/><!-- NE -->
+                            <text class="map-label map-label-dark" x="420" y="225">NE</text>
+
+                            <path class="state state-surrounding" d="M 569.19154,199.5843 L 569.45592,202.3705 L 571.67964,202.94776 L 572.63358,204.17309 L 573.13359,206.02845 L 576.92643,209.3871 L 577.6123,211.7786 L 576.93796,215.20307 L 575.35565,218.43505 L 574.55631,221.17684 L 572.38356,222.77888 L 570.66805,223.35128 L 565.08903,225.21148 L 563.69757,229.06017 L 564.42621,230.43191 L 566.26672,232.1145 L 565.98379,236.15079 L 564.22064,237.68865 L 563.44923,239.33179 L 563.57645,242.10811 L 561.69014,242.56535 L 560.06469,243.67026 L 559.7859,245.02289 L 560.06469,247.13781 L 558.51367,248.25388 L 556.04314,245.1206 L 554.78057,242.67073 L 489.04475,245.18558 L 488.12672,245.35102 L 486.07432,240.83506 L 485.8457,234.20499 L 484.24534,230.08978 L 483.55948,224.83147 L 481.27325,221.1735 L 480.35877,216.37243 L 477.61529,208.82788 L 476.47218,203.45524 L 475.10044,201.28333 L 473.50008,198.53987 L 475.45406,193.69604 L 476.8258,187.98047 L 474.08233,185.92286 L 473.62508,183.17939 L 474.53958,180.66454 L 476.25425,180.66454 L 558.90825,179.39506 L 559.74251,183.57818 L 561.99469,185.13915 L 562.2514,186.56224 L 560.22186,189.95155 L 560.41227,193.15707 L 562.92713,196.95527 L 565.45392,198.24889 L 568.5332,198.75194 L 569.19154,199.5843 z"/><!-- IA -->
+                            <text class="map-label map-label-dark" x="520" y="218">IA</text>
+
+                            <path class="state state-surrounding" d="M 619.54145,300.34244 L 619.5727,297.11273 L 620.14009,292.46677 L 622.47262,289.55091 L 624.33927,285.47515 L 626.57229,281.47982 L 626.20079,276.22742 L 624.19558,272.68485 L 624.0992,269.33817 L 624.79403,264.06866 L 623.96862,256.89029 L 622.90228,241.11284 L 621.609,226.0955 L 620.68672,214.4563 L 620.41421,213.53491 L 619.60591,210.94834 L 618.31263,207.23015 L 616.69602,205.45188 L 615.24108,202.86532 L 615.00751,197.37636 L 569.21108,199.97461 L 569.4397,202.34656 L 571.72593,203.03243 L 572.64041,204.17554 L 573.09766,206.00452 L 576.98424,209.43386 L 577.67012,211.72009 L 576.98424,215.14943 L 575.15526,218.80739 L 574.4694,221.32223 L 572.18317,223.15122 L 570.35419,223.83709 L 565.09587,225.20882 L 564.41,227.0378 L 563.72413,229.09541 L 564.41,230.46715 L 566.23898,232.06751 L 566.01036,236.18271 L 564.18137,237.78307 L 563.49551,239.38343 L 563.49551,242.1269 L 561.66653,242.58414 L 560.06617,243.72726 L 559.83755,245.099 L 560.06617,247.1566 L 558.3515,248.47117 L 557.3227,251.27181 L 557.77994,254.92976 L 560.06617,262.24569 L 567.3821,269.79024 L 572.86903,273.4482 L 572.64041,277.79203 L 573.55491,279.16377 L 579.95634,279.62101 L 582.69981,280.99275 L 582.01395,284.65071 L 579.72772,290.5949 L 579.04185,293.79562 L 581.32807,297.6822 L 587.72951,302.94052 L 592.30197,303.62639 L 594.35956,308.65609 L 596.41717,311.8568 L 595.50268,314.82889 L 597.10304,318.9441 L 598.93202,321.00171 L 600.34605,320.12102 L 601.25371,318.04623 L 603.46679,316.29903 L 605.59826,315.68463 L 608.20079,316.86443 L 611.82778,318.24013 L 613.01673,317.9419 L 613.2166,315.68345 L 611.9293,313.27166 L 612.23352,310.89494 L 614.07192,309.54749 L 617.09446,308.7372 L 618.35536,308.27868 L 617.74275,306.8918 L 616.95138,304.53743 L 618.38398,303.55647 L 619.54145,300.34244 z"/><!-- IL -->
+                            <text class="map-label map-label-dark" x="600" y="260">IL</text>
+
+                            <path class="state state-surrounding" d="M 507.88059,324.38028 L 495.26233,324.58471 L 449.17324,324.12748 L 404.61576,322.06985 L 379.98602,320.81244 L 383.87981,256.21747 L 405.96327,256.89264 L 446.2524,257.73404 L 490.55364,258.72162 L 495.64927,258.72162 L 497.83367,260.88402 L 499.85133,260.86264 L 501.49163,261.87511 L 501.42913,264.88434 L 499.60015,266.60971 L 499.2679,268.84188 L 501.11098,272.24421 L 504.06334,275.43927 L 506.39069,277.05373 L 507.69146,288.29455 L 507.88059,324.38028 z"/><!-- KS -->
+                            <text class="map-label map-label-dark" x="440" y="293">KS</text>
+
+                            <path class="state state-surrounding" d="M 380.34313,320.82146 L 363.65895,319.54815 L 362.77873,330.50058 L 383.24411,331.65746 L 415.29966,332.96106 L 412.96506,357.37971 L 412.50781,375.21228 L 412.73644,376.81264 L 417.08027,380.4706 L 419.13787,381.61371 L 419.82374,381.38509 L 420.50961,379.32748 L 421.88135,381.15647 L 423.93895,381.15647 L 423.93895,379.78473 L 426.68242,381.15647 L 426.22518,385.04305 L 430.34039,385.27167 L 432.85523,386.41479 L 436.97044,387.10066 L 439.48529,388.92964 L 441.77152,386.87204 L 445.20086,387.5579 L 447.71571,390.98724 L 448.63019,390.98724 L 448.63019,393.27347 L 450.91642,393.95933 L 453.20264,391.67311 L 455.03163,392.35897 L 457.54647,392.35897 L 458.46097,394.87383 L 464.76204,396.9528 L 466.13378,396.26694 L 467.96276,392.15173 L 469.10587,392.15173 L 470.24899,394.20933 L 474.3642,394.8952 L 478.02215,396.26694 L 480.99425,397.18143 L 482.82324,396.26694 L 483.5091,393.75209 L 487.85293,393.75209 L 489.91053,394.66658 L 492.654,392.60897 L 493.79712,392.60897 L 494.48299,394.20933 L 498.59819,394.20933 L 500.19855,392.15173 L 502.02754,392.60897 L 504.08514,395.12383 L 507.28585,396.9528 L 510.48658,397.8673 L 512.42766,398.98623 L 512.03856,361.76922 L 510.66681,350.79524 L 510.50635,341.9229 L 509.06646,335.38517 L 508.28826,328.20553 L 508.22012,324.38931 L 496.08328,324.70805 L 449.67324,324.25081 L 404.63433,322.19319 L 380.34313,320.82146 z"/><!-- OK -->
+                            <text class="map-label map-label-dark" x="448" y="362">OK</text>
+
+                            <path class="state state-surrounding" d="M 593.82477,343.05296 L 589.84489,343.76966 L 584.73274,343.13563 L 585.15344,341.53356 L 588.13319,338.96687 L 589.07657,335.31062 L 587.24759,332.33852 L 508.83002,334.85337 L 510.43038,341.71206 L 510.43037,349.94248 L 511.80212,360.91647 L 512.03074,398.7534 L 514.31697,400.69669 L 517.28906,399.32496 L 520.03254,400.46807 L 520.71288,407.04137 L 576.33414,405.90077 L 577.47977,403.8104 L 577.19315,400.26089 L 575.36752,397.28879 L 576.96621,395.80358 L 575.36752,393.29208 L 576.05172,390.78225 L 577.42011,385.17682 L 579.9383,383.11419 L 579.25243,380.82963 L 582.9104,375.45784 L 585.65387,374.08945 L 585.54039,372.59587 L 585.19495,370.77023 L 588.0519,365.1715 L 590.45494,363.91491 L 590.83907,360.48728 L 592.60974,359.24558 L 589.46622,358.76131 L 588.12476,354.75087 L 590.92884,352.37416 L 591.4791,350.35496 L 592.75858,346.30835 L 593.82477,343.05296 z"/><!-- AR -->
+                            <text class="map-label map-label-dark" x="545" y="372">AR</text>
+
+                            <path class="state state-surrounding" d="M 696.67788,318.25411 L 644.78479,323.2656 L 629.02523,325.04386 L 624.40403,325.55657 L 620.53568,325.52885 L 620.31471,329.62968 L 612.12933,329.89369 L 605.17792,330.54033 L 597.08709,330.41647 L 595.67331,337.48933 L 593.97708,342.96938 L 590.68391,345.72022 L 589.33517,350.10128 L 589.01185,352.68785 L 584.97033,354.95109 L 586.42527,358.50763 L 585.45531,362.87247 L 584.48693,363.66212 L 692.64548,353.25457 L 693.04875,349.29963 L 694.85948,347.80924 L 697.69363,347.05979 L 698.36556,343.34281 L 702.46416,340.63785 L 706.51109,339.14382 L 710.59467,335.57349 L 715.03076,333.54803 L 715.55202,330.48068 L 719.61662,326.49569 L 720.16742,326.38152 C 720.16742,326.38152 720.19867,327.51314 721.00697,327.51314 C 721.81527,327.51314 722.9469,327.86771 722.9469,327.86771 L 725.21015,324.27992 L 727.28049,323.63328 L 729.5556,323.92849 L 731.15391,320.39563 L 734.10916,317.75172 L 734.53084,315.81261 L 734.8398,312.10146 L 732.69325,311.90169 L 730.09157,313.93002 L 723.09826,313.95909 L 704.73897,316.34591 L 696.67788,318.25411 z"/><!-- TN -->
+                            <text class="map-label map-label-dark" x="660" y="342">TN</text>
+
+                            <path class="state state-surrounding" d="M 725.9944,295.2707 L 723.70108,297.67238 L 720.12289,301.66642 L 715.19834,307.13109 L 713.98257,308.84686 L 713.92007,310.94844 L 709.54021,313.11253 L 703.88209,316.50741 L 696.65022,318.30626 L 644.78233,323.20512 L 629.02277,324.98338 L 624.40157,325.49609 L 620.53322,325.46837 L 620.30627,329.68865 L 612.12686,329.83321 L 605.17545,330.47985 L 597.18797,330.41963 L 598.39575,329.09955 L 600.89529,327.5587 L 601.12392,324.35797 L 602.03841,322.52899 L 600.43159,319.99009 L 601.23342,318.08328 L 603.49668,316.30502 L 605.59826,315.65837 L 608.34649,316.95166 L 611.90303,318.24494 L 613.03466,317.92162 L 613.19632,315.65837 L 611.90303,313.23346 L 612.22635,310.97021 L 614.16628,309.51527 L 616.75286,308.86862 L 618.36946,308.22198 L 617.56116,306.44371 L 616.91452,304.50378 L 618.42114,303.50798 C 618.42442,303.47086 619.6751,299.98569 619.65943,299.85017 L 622.71265,298.37149 L 628.03244,297.40153 L 632.52648,296.91655 L 633.91892,298.54398 L 635.44719,299.41478 L 637.03796,296.30657 L 640.22504,295.02395 L 642.43013,296.50798 L 642.84069,297.50702 L 644.01421,297.24301 L 643.85254,294.29008 L 646.98341,292.54089 L 649.1315,291.46741 L 650.66086,293.12822 L 653.97901,293.08402 L 654.56634,291.51277 L 654.19883,289.24953 L 656.79936,285.25103 L 661.57591,281.81313 L 662.28186,276.97727 L 665.20688,276.52136 L 668.99834,274.87568 L 671.44166,273.16744 L 671.24333,271.60251 L 670.10088,270.14757 L 670.6667,267.15266 L 674.85155,267.03516 L 677.15146,266.28936 L 680.49885,267.71846 L 682.55296,272.0833 L 687.68525,272.09412 L 689.73626,274.30231 L 691.35171,274.15461 L 693.9534,272.87644 L 699.19046,273.44981 L 701.76538,273.66732 L 703.45296,271.61108 L 706.07091,270.1852 L 707.95269,269.4781 L 708.59933,272.31473 L 710.64276,273.37307 L 713.28552,275.45556 L 713.40299,281.1288 L 714.21129,282.70121 L 716.80101,284.25749 L 717.57265,286.552 L 721.73254,289.98894 L 723.53785,293.61218 L 725.9944,295.2707 z"/><!-- KY -->
+                            <text class="map-label map-label-dark" x="670" y="300">KY</text>
+
+                            <!-- MISSOURI (primary - solid green) -->
+                            <path class="state state-mo" d="M 558.44022,248.11316 L 555.92035,245.02591 L 554.77723,242.73968 L 490.42,245.14022 L 488.13374,245.25453 L 489.39117,247.76938 L 489.16255,250.0556 L 491.67739,253.94219 L 494.76379,258.0574 L 497.8502,260.80087 L 500.01143,261.02949 L 501.50816,261.94399 L 501.50816,264.91608 L 499.67919,266.51644 L 499.2679,268.80266 L 501.27954,272.23201 L 503.7944,275.2041 L 506.30924,277.03308 L 507.68097,288.69283 L 507.99511,324.76504 L 508.22373,329.45179 L 508.68097,334.8353 L 531.11396,333.96848 L 554.31999,333.28261 L 575.12465,332.4816 L 586.77939,332.2513 L 588.94879,335.6773 L 588.2646,338.9848 L 585.17735,341.38784 L 584.60496,343.22518 L 589.98345,343.68244 L 593.87841,342.99656 L 595.59559,337.50293 L 596.24701,331.64614 L 598.34504,329.09098 L 600.94107,327.60409 L 600.9925,324.55385 L 602.00852,322.61737 L 600.31429,320.0736 L 598.98336,321.05786 L 596.99074,318.83062 L 595.70571,314.07162 L 596.50672,311.55342 L 594.56259,308.12576 L 592.73195,303.54996 L 587.93254,302.75062 L 580.96374,297.15187 L 579.24488,293.03834 L 580.04423,289.83762 L 582.1035,283.77995 L 582.56242,280.91632 L 580.61328,279.88501 L 573.75794,279.08734 L 572.72997,277.37518 L 572.61817,273.14482 L 567.13123,269.71381 L 560.15572,261.94231 L 557.8695,254.62638 L 557.63921,250.40106 L 558.44022,248.11316 z"/>
+                            <text class="map-label" x="540" y="293" style="font-size:10px;">MISSOURI</text>
+
+                            <!-- Columbia pin marker -->
+                            <circle cx="543" cy="272" r="7" fill="#cc2222" opacity="0.9"/>
+                            <circle cx="543" cy="272" r="3.5" fill="white"/>
+                            <text class="map-label" x="543" y="264" style="font-size:6px; fill:#cc2222; font-weight:700;">COLUMBIA</text>
+                        </svg>
+                        <div class="map-legend">
+                            <span style="display:inline-block; width:10px; height:10px; background:var(--accent); margin-right:4px; vertical-align:middle;"></span> Home Base
+                            &nbsp;&nbsp;
+                            <span style="display:inline-block; width:10px; height:10px; background:var(--accent-light); opacity:0.4; margin-right:4px; vertical-align:middle;"></span> Service Area
+                            &nbsp;&nbsp;
+                            <span style="display:inline-block; width:8px; height:8px; background:#cc2222; border-radius:50%; margin-right:4px; vertical-align:middle;"></span> Columbia, MO
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== CTA BANNER ====== -->
+    <section class="cta-banner">
+        <h2>Ready to Get Started?</h2>
+        <p>Get a free estimate for your project. We serve Columbia, MO and the entire Midwest.</p>
+        <a href="tel:5738082771" class="cta-phone">(573) 808-2771</a>
+        <br>
+        <a href="#contact" class="btn btn-dark">Request a Quote</a>
+    </section>
+
+    <!-- ====== CONTACT ====== -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Get In <span>Touch</span></h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info reveal">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.24 1.02l-2.2 2.2z"/></svg>
+                        <div class="contact-item-text">
+                            <a href="tel:5738082771">(573) 808-2771</a><br>
+                            Call or text anytime
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                        <div class="contact-item-text">
+                            <a href="mailto:Eran@showmemobileblasting.com">Eran@showmemobileblasting.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
+                        <div class="contact-item-text">
+                            Columbia, Missouri<br>
+                            Serving the entire Midwest
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form reveal" onsubmit="handleSubmit(event)">
+                    <div class="form-row">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="tel" name="phone" placeholder="Phone Number" required>
+                    </div>
+                    <input type="email" name="email" placeholder="Email Address">
+                    <select name="service" required>
+                        <option value="" disabled selected>What do you need?</option>
+                        <option value="automotive">Automotive / Trailer</option>
+                        <option value="residential">Residential</option>
+                        <option value="commercial">Commercial / Industrial</option>
+                        <option value="marine">Marine</option>
+                        <option value="farm">Farm / Heavy Equipment</option>
+                        <option value="other">Other / Not Sure</option>
+                    </select>
+                    <textarea name="message" placeholder="Tell us briefly what you need done — material, size, location, etc."></textarea>
+                    <button type="submit" class="btn btn-accent" style="justify-content:center;">Send Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== FOOTER ====== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Show Me <span>Mobile Blasting</span></h3>
+                    <p>Professional mobile dustless blasting services based in Columbia, Missouri. Eco-friendly surface prep for metal, wood, masonry, fiberglass &mdash; we come to you.</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#process">How It Works</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#gallery">Our Work</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Automotive &amp; Trailer</a></li>
+                        <li><a href="#services">Commercial &amp; Residential</a></li>
+                        <li><a href="#services">Industrial &amp; Farm</a></li>
+                        <li><a href="#services">Marine</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Show Me Mobile Blasting, LLC. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/ShowMeMobileBlasting/" target="_blank" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll reveals
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Mobile menu
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+        });
+
+        function closeMenu() {
+            navToggle.classList.remove('active');
+            navLinks.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Form
+        function handleSubmit(e) {
+            e.preventDefault();
+            alert('Thanks! We\'ll get back to you within 24 hours.');
+            e.target.reset();
+        }
+
+        function handleQuote(e) {
+            e.preventDefault();
+            alert('Thanks! We\'ll get back to you with a free quote — usually within 30 minutes.');
+            e.target.reset();
+            document.getElementById('photoFileNames').style.display = 'none';
+            document.getElementById('photoFileNames').innerHTML = '';
+            document.querySelector('.photo-upload-text').innerHTML = 'Add Photos <em>(optional)</em>';
+        }
+
+        function showFileNames(input) {
+            const container = document.getElementById('photoFileNames');
+            const label = document.querySelector('.photo-upload-text');
+            if (input.files.length > 0) {
+                const names = Array.from(input.files).map(f => f.name).join(', ');
+                container.textContent = input.files.length + ' photo' + (input.files.length > 1 ? 's' : '') + ' selected: ' + names;
+                container.style.display = 'block';
+                label.innerHTML = input.files.length + ' Photo' + (input.files.length > 1 ? 's' : '') + ' Added ✓';
+            } else {
+                container.style.display = 'none';
+                label.innerHTML = 'Add Photos <em>(optional)</em>';
+            }
+        }
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
