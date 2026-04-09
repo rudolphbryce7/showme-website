@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get a Free Quote | ShowMe Mobile Blasting</title>
+    <meta name="description" content="Request a free estimate for mobile dustless blasting services in Columbia, MO and the Midwest. Fast response, no obligation.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --white: #ffffff;
+            --off-white: #f7f7f7;
+            --border: #e0e0e0;
+            --mid-gray: #999999;
+            --dark-gray: #555555;
+            --dark: #333333;
+            --black: #1a1a1a;
+            --accent: #4a7a3a;
+            --accent-dark: #3a6130;
+            --accent-light: #5a9448;
+            --font-display: 'Rajdhani', sans-serif;
+            --font-body: 'Nunito Sans', sans-serif;
+        }
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-body); color: var(--dark-gray); background: var(--white); line-height: 1.7; }
+
+        .container { max-width: 1080px; margin: 0 auto; padding: 0 30px; }
+
+        /* TOP BAR */
+        .top-bar { background: var(--black); padding: 8px 0; font-size: 0.85rem; color: #ccc; }
+        .top-bar .container { display: flex; justify-content: space-between; align-items: center; }
+        .top-bar a { color: #ccc; text-decoration: none; transition: color 0.3s; }
+        .top-bar a:hover { color: var(--white); }
+        .top-bar-right { display: flex; gap: 20px; align-items: center; }
+        .top-bar-right a { display: flex; align-items: center; gap: 6px; }
+        .top-bar-right svg { width: 14px; height: 14px; fill: currentColor; }
+
+        /* NAV */
+        .nav { background: var(--white); padding: 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.06); }
+        .nav .container { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+        .nav-logo { font-family: var(--font-display); font-size: 1.6rem; font-weight: 700; text-transform: uppercase; color: var(--black); text-decoration: none; }
+        .nav-logo span { color: var(--accent); }
+        .nav-links { display: flex; list-style: none; gap: 8px; align-items: center; }
+        .nav-links a { font-family: var(--font-display); font-size: 0.95rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--dark); text-decoration: none; padding: 6px 12px; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--accent); }
+        .nav-cta { background: var(--accent); color: var(--white) !important; padding: 8px 18px !important; }
+        .nav-cta:hover { background: var(--accent-dark); }
+
+        /* PAGE HEADER */
+        .page-header {
+            background: var(--black);
+            padding: 60px 0 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        .page-header::before {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 4px;
+            background: var(--accent);
+        }
+        .page-header h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--white);
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+        .page-header h1 span { color: var(--accent-light); }
+        .page-header p { color: rgba(255,255,255,0.65); font-size: 1.05rem; max-width: 540px; }
+
+        /* FORMS SECTION */
+        .forms-section { padding: 70px 0 100px; }
+
+        .form-wrap {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .form-card {
+            background: var(--black);
+            border: 1px solid rgba(255,255,255,0.08);
+            padding: 48px;
+        }
+
+        .form-card h2 {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--white);
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+        .form-card h2 span { color: var(--accent); }
+        .form-card > p { font-size: 0.95rem; color: rgba(255,255,255,0.5); margin-bottom: 28px; }
+
+        .form-divider { width: 40px; height: 3px; background: var(--accent); margin-bottom: 28px; }
+
+        .quote-form {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+        .form-card input,
+        .form-card textarea,
+        .form-card select {
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            padding: 13px 16px;
+            border: 1px solid rgba(255,255,255,0.15);
+            background: rgba(255,255,255,0.08);
+            color: var(--white);
+            outline: none;
+            transition: border-color 0.3s;
+            width: 100%;
+        }
+        .form-card input::placeholder,
+        .form-card textarea::placeholder { color: rgba(255,255,255,0.4); }
+        .form-card input:focus,
+        .form-card textarea:focus,
+        .form-card select:focus { border-color: var(--accent-light); }
+        .form-card select { cursor: pointer; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23999' d='M6 8L1 3h10z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; }
+        .form-card select option { background: var(--black); color: var(--white); }
+        .form-card textarea { resize: vertical; min-height: 100px; }
+
+        /* Photo upload */
+        .photo-upload {
+            border: 2px dashed rgba(255,255,255,0.2);
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: border-color 0.3s, background 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+        }
+        .photo-upload:hover { border-color: var(--accent-light); background: rgba(255,255,255,0.04); }
+        .photo-upload-text { font-family: var(--font-display); font-size: 0.95rem; font-weight: 600; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 1px; }
+        .photo-upload-text em { font-style: normal; font-weight: 400; text-transform: none; letter-spacing: 0; color: rgba(255,255,255,0.35); }
+        .photo-upload-hint { font-size: 0.8rem; color: rgba(255,255,255,0.3); }
+        .photo-file-names { font-size: 0.8rem; color: var(--accent-light); padding: 4px 0; line-height: 1.5; }
+
+        /* Consent */
+        .consent-block { display: flex; align-items: flex-start; gap: 10px; margin: 4px 0 2px; }
+        .consent-block input[type="checkbox"] { margin-top: 2px; flex-shrink: 0; accent-color: var(--accent-light); width: 16px; height: 16px; cursor: pointer; }
+        .consent-block label { font-size: 0.9rem; color: rgba(255,255,255,0.75); cursor: pointer; line-height: 1.4; }
+        .consent-fine { font-size: 0.75rem; color: rgba(255,255,255,0.4); line-height: 1.6; padding-left: 26px; }
+        .consent-fine a { color: rgba(255,255,255,0.55); }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            font-family: var(--font-display);
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 14px 32px;
+            text-decoration: none;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+        }
+        .btn-accent { background: var(--accent); color: var(--white); }
+        .btn-accent:hover { background: var(--accent-dark); }
+        .btn-full { width: 100%; justify-content: center; font-size: 1.05rem; padding: 15px 32px; }
+
+        /* Contact info strip */
+        .contact-strip {
+            background: var(--off-white);
+            border-top: 1px solid var(--border);
+            padding: 40px 0;
+        }
+        .contact-strip .container {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+        .contact-strip-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .contact-strip-item svg { width: 22px; height: 22px; fill: var(--accent); flex-shrink: 0; }
+        .contact-strip-item a { color: var(--dark); text-decoration: none; font-weight: 600; }
+        .contact-strip-item a:hover { color: var(--accent); }
+        .contact-strip-item span { font-size: 0.85rem; color: var(--mid-gray); display: block; }
+
+        /* Footer */
+        .footer { background: var(--black); color: #aaa; padding: 50px 0 0; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; padding-bottom: 40px; }
+        .footer-brand h3 { font-family: var(--font-display); font-size: 1.3rem; font-weight: 700; text-transform: uppercase; color: var(--white); margin-bottom: 12px; }
+        .footer-brand h3 span { color: var(--accent); }
+        .footer-brand p { font-size: 0.9rem; color: #aaa; line-height: 1.7; }
+        .footer h4 { font-family: var(--font-display); font-size: 0.95rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--white); margin-bottom: 14px; }
+        .footer-nav { list-style: none; }
+        .footer-nav li { margin-bottom: 8px; }
+        .footer-nav a { color: #aaa; text-decoration: none; font-size: 0.9rem; }
+        .footer-nav a:hover { color: var(--white); }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding: 20px 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 0.85rem; }
+        .footer-bottom p { color: #aaa; }
+        .footer-bottom a { color: #aaa; text-decoration: none; }
+        .footer-bottom a:hover { color: var(--white); }
+        .footer-legal-links { display: flex; gap: 20px; }
+
+        @media (max-width: 768px) {
+            .form-card { padding: 28px 20px; }
+            .form-row { grid-template-columns: 1fr; }
+            .contact-strip .container { flex-direction: column; gap: 20px; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="container">
+            <span>&#9733; Veteran Owned &amp; Operated &nbsp;|&nbsp; Columbia, MO &mdash; Serving the Entire Midwest</span>
+            <div class="top-bar-right">
+                <a href="mailto:eran@showmemobileblasting.com">
+                    <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    eran@showmemobileblasting.com
+                </a>
+                <a href="tel:5738082771">
+                    <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.24 1.02l-2.2 2.2z"/></svg>
+                    (573) 808-2771
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAV -->
+    <nav class="nav">
+        <div class="container">
+            <a href="/" class="nav-logo">Show Me <span>Mobile Blasting</span></a>
+            <ul class="nav-links">
+                <li><a href="/#services">Services</a></li>
+                <li><a href="/#process">Process</a></li>
+                <li><a href="/#about">About</a></li>
+                <li><a href="/#gallery">Our Work</a></li>
+                <li><a href="/#area">Areas</a></li>
+                <li><a href="/quote.html" class="nav-cta">Get a Quote</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+        <div class="container">
+            <h1>Get a <span>Free Estimate</span></h1>
+            <p>Tell us about your project and we'll get back to you fast — usually within 30 minutes. No pressure, no obligation.</p>
+        </div>
+    </div>
+
+    <!-- FORMS -->
+    <section class="forms-section">
+        <div class="container">
+            <div class="form-wrap">
+
+                <!-- Quote Request Form -->
+                <div class="form-card">
+                    <h2>Request a <span>Free Quote</span></h2>
+                    <div class="form-divider"></div>
+                    <p>Tell us about your project and include photos if you have them. We'll get back to you fast — usually within 30 minutes.</p>
+                    <form class="quote-form" onsubmit="handleQuote(event)">
+                        <div class="form-row">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                            <input type="tel" name="phone" placeholder="Phone Number" required>
+                        </div>
+                        <input type="email" name="email" placeholder="Email Address (optional)">
+                        <select name="service" required>
+                            <option value="" disabled selected>What do you need blasted?</option>
+                            <option value="automotive">Automotive / Trailer</option>
+                            <option value="residential">Residential</option>
+                            <option value="commercial">Commercial / Industrial</option>
+                            <option value="marine">Marine</option>
+                            <option value="farm">Farm / Heavy Equipment</option>
+                            <option value="other">Other / Not Sure</option>
+                        </select>
+                        <textarea name="message" placeholder="Brief description — material, size, location, etc. (optional)"></textarea>
+                        <div class="photo-upload" onclick="document.getElementById('quotePhotos').click()">
+                            <svg viewBox="0 0 24 24" width="28" height="28"><path fill="rgba(255,255,255,0.4)" d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+                            <span class="photo-upload-text">Add Photos <em>(optional)</em></span>
+                            <span class="photo-upload-hint">Tap to upload photos of your project</span>
+                            <input type="file" id="quotePhotos" name="photos" multiple accept="image/*" style="display:none" onchange="showFileNames(this)">
+                        </div>
+                        <div id="photoFileNames" class="photo-file-names" style="display:none"></div>
+                        <div class="consent-block">
+                            <input type="checkbox" id="sms_consent" name="sms_consent" required>
+                            <label for="sms_consent">I agree to receive text messages from ShowMe Mobile Blasting.</label>
+                        </div>
+                        <p class="consent-fine">By checking the box above, you consent to receive marketing, transactional, and informational text messages from ShowMe Mobile Blasting at the number provided. Msg &amp; data rates may apply. Reply STOP to (573) 410-4010 to unsubscribe. Consent is not a condition of purchase. View our <a href="/privacy-policy.html">Privacy Policy</a> and <a href="/terms.html">Terms of Service</a>.</p>
+                        <button type="submit" class="btn btn-accent btn-full">Get My Free Quote →</button>
+                        <p style="font-size:0.8rem;color:rgba(255,255,255,0.35);text-align:center;margin-top:8px;">By submitting this form, you agree to receive marketing, transactional, and service-related text messages from ShowMe Mobile Blasting. Reply STOP to unsubscribe at any time.</p>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT STRIP -->
+    <div class="contact-strip">
+        <div class="container">
+            <div class="contact-strip-item">
+                <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.24 1.02l-2.2 2.2z"/></svg>
+                <div>
+                    <a href="tel:5738082771">(573) 808-2771</a>
+                    <span>Call or text anytime</span>
+                </div>
+            </div>
+            <div class="contact-strip-item">
+                <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                <div>
+                    <a href="mailto:eran@showmemobileblasting.com">eran@showmemobileblasting.com</a>
+                    <span>We respond fast</span>
+                </div>
+            </div>
+            <div class="contact-strip-item">
+                <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
+                <div>
+                    <span style="font-weight:600;color:var(--dark);">720 N Grace Ln, Columbia, MO 65201</span>
+                    <span>Serving the entire Midwest</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Show Me <span>Mobile Blasting</span></h3>
+                    <p>Professional mobile dustless blasting services based in Columbia, Missouri. Eco-friendly surface prep for metal, wood, masonry, fiberglass &mdash; we come to you.</p>
+                    <p style="margin-top:12px;font-size:0.85rem;color:#aaa;">720 N Grace Ln, Columbia, MO 65201<br><a href="tel:5738082771" style="color:#aaa;">(573) 808-2771</a> &nbsp;|&nbsp; <a href="mailto:eran@showmemobileblasting.com" style="color:#aaa;">eran@showmemobileblasting.com</a></p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul class="footer-nav">
+                        <li><a href="/#services">Services</a></li>
+                        <li><a href="/#process">How It Works</a></li>
+                        <li><a href="/#about">About Us</a></li>
+                        <li><a href="/#gallery">Our Work</a></li>
+                        <li><a href="/#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Legal</h4>
+                    <ul class="footer-nav">
+                        <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="/terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ShowMe Mobile Blasting LLC. All rights reserved.</p>
+                <div class="footer-legal-links">
+                    <a href="/privacy-policy.html">Privacy Policy</a>
+                    <a href="/terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        async function submitToGHL(formEl, formType) {
+            const data = new FormData(formEl);
+            const payload = {
+                name: data.get('name') || '',
+                phone: data.get('phone') || '',
+                email: data.get('email') || '',
+                service: data.get('service') || '',
+                message: data.get('message') || '',
+                form_type: formType,
+                sms_consent: data.get('sms_consent') === 'on',
+            };
+            try {
+                await fetch('/api/submit', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload),
+                });
+            } catch (err) {
+                console.error('Form submit error:', err);
+            }
+        }
+
+        function handleQuote(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('button[type="submit"]');
+            btn.textContent = 'Sending...';
+            btn.disabled = true;
+            submitToGHL(e.target, 'quote').then(() => {
+                btn.textContent = 'Quote Requested!';
+                e.target.reset();
+                document.getElementById('photoFileNames').style.display = 'none';
+                document.getElementById('photoFileNames').innerHTML = '';
+                document.querySelector('.photo-upload-text').innerHTML = 'Add Photos <em>(optional)</em>';
+            });
+        }
+
+        function showFileNames(input) {
+            const container = document.getElementById('photoFileNames');
+            const label = document.querySelector('.photo-upload-text');
+            if (input.files.length > 0) {
+                const names = Array.from(input.files).map(f => f.name).join(', ');
+                container.textContent = input.files.length + ' photo' + (input.files.length > 1 ? 's' : '') + ' selected: ' + names;
+                container.style.display = 'block';
+                label.innerHTML = input.files.length + ' Photo' + (input.files.length > 1 ? 's' : '') + ' Added ✓';
+            } else {
+                container.style.display = 'none';
+                label.innerHTML = 'Add Photos <em>(optional)</em>';
+            }
+        }
+    </script>
+
+    <!-- NO CHAT WIDGET ON THIS PAGE -->
+
+</body>
+</html>

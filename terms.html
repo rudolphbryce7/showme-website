@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service | ShowMe Mobile Blasting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --white: #ffffff;
+            --off-white: #f7f7f7;
+            --border: #e0e0e0;
+            --mid-gray: #999999;
+            --dark-gray: #555555;
+            --dark: #333333;
+            --black: #1a1a1a;
+            --accent: #4a7a3a;
+            --accent-dark: #3a6130;
+            --accent-light: #5a9448;
+            --font-display: 'Rajdhani', sans-serif;
+            --font-body: 'Nunito Sans', sans-serif;
+        }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: var(--font-body); color: var(--dark-gray); background: var(--white); line-height: 1.7; }
+
+        /* TOP BAR */
+        .top-bar { background: var(--black); padding: 8px 0; font-size: 0.85rem; color: #ccc; }
+        .top-bar .container { display: flex; justify-content: space-between; align-items: center; }
+        .top-bar a { color: #ccc; text-decoration: none; }
+        .top-bar a:hover { color: var(--white); }
+        .top-bar-right { display: flex; gap: 20px; align-items: center; }
+        .top-bar-right a { display: flex; align-items: center; gap: 6px; }
+        .top-bar-right svg { width: 14px; height: 14px; fill: currentColor; }
+
+        /* NAV */
+        .nav { background: var(--white); padding: 0; box-shadow: 0 2px 10px rgba(0,0,0,0.06); }
+        .nav .container { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+        .nav-logo { font-family: var(--font-display); font-size: 1.6rem; font-weight: 700; text-transform: uppercase; color: var(--black); text-decoration: none; }
+        .nav-logo span { color: var(--accent); }
+        .nav-back { font-family: var(--font-display); font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); text-decoration: none; }
+        .nav-back:hover { color: var(--accent-dark); }
+
+        .container { max-width: 1080px; margin: 0 auto; padding: 0 30px; }
+
+        /* PAGE HEADER */
+        .page-header {
+            background: var(--black);
+            padding: 50px 0 40px;
+            position: relative;
+        }
+        .page-header::before {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 4px;
+            background: var(--accent);
+        }
+        .page-header h1 {
+            font-family: var(--font-display);
+            font-size: clamp(1.8rem, 3vw, 2.8rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--white);
+            letter-spacing: 1px;
+        }
+        .page-header p { color: rgba(255,255,255,0.55); font-size: 0.9rem; margin-top: 6px; }
+
+        /* CONTENT */
+        .content { max-width: 800px; margin: 0 auto; padding: 60px 30px 80px; }
+
+        h2 {
+            font-family: var(--font-display);
+            font-size: 1.15rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--black);
+            margin-top: 40px;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--accent);
+            display: inline-block;
+        }
+        p { margin-bottom: 16px; color: var(--dark-gray); }
+        ul { margin: 0 0 16px 24px; }
+        li { margin-bottom: 8px; color: var(--dark-gray); list-style: disc; }
+        a { color: var(--accent); }
+        a:hover { color: var(--accent-dark); }
+
+        .highlight {
+            background: #f0f5ee;
+            border-left: 4px solid var(--accent);
+            padding: 16px 20px;
+            margin: 24px 0;
+        }
+        .highlight p { margin: 0; }
+
+        /* FOOTER */
+        .footer { background: var(--black); color: #aaa; padding: 50px 0 0; margin-top: 80px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; padding-bottom: 40px; }
+        .footer h3 { font-family: var(--font-display); font-size: 1.3rem; font-weight: 700; text-transform: uppercase; color: var(--white); margin-bottom: 12px; }
+        .footer h3 span { color: var(--accent); }
+        .footer h4 { font-family: var(--font-display); font-size: 0.95rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--white); margin-bottom: 14px; }
+        .footer p { font-size: 0.9rem; color: #aaa; line-height: 1.7; margin-bottom: 0; }
+        .footer-contact { margin-top: 12px; font-size: 0.85rem; color: #aaa; line-height: 1.8; }
+        .footer-contact a { color: #aaa; text-decoration: none; }
+        .footer-contact a:hover { color: var(--white); }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 8px; }
+        .footer-links a { color: #aaa; text-decoration: none; font-size: 0.9rem; }
+        .footer-links a:hover { color: var(--white); }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding: 20px 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 0.85rem; }
+        .footer-bottom a { color: #aaa; text-decoration: none; }
+        .footer-bottom a:hover { color: var(--white); }
+        .footer-legal-links { display: flex; gap: 20px; }
+
+        @media (max-width: 768px) {
+            .footer-grid { grid-template-columns: 1fr; }
+            .content { padding: 40px 20px 60px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="container">
+            <span>&#9733; Veteran Owned &amp; Operated &nbsp;|&nbsp; Columbia, MO &mdash; Serving the Entire Midwest</span>
+            <div class="top-bar-right">
+                <a href="mailto:eran@showmemobileblasting.com">
+                    <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    eran@showmemobileblasting.com
+                </a>
+                <a href="tel:5738082771">
+                    <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.24 1.02l-2.2 2.2z"/></svg>
+                    (573) 808-2771
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAV -->
+    <nav class="nav">
+        <div class="container">
+            <a href="/" class="nav-logo">Show Me <span>Mobile Blasting</span></a>
+            <a href="/" class="nav-back">&larr; Back to Home</a>
+        </div>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+        <div class="container">
+            <h1>Terms of Service</h1>
+            <p>Last updated: April 7, 2026</p>
+        </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+        <p>These Terms of Service ("Terms") govern your use of showmemobileblasting.com and any services provided by ShowMe Mobile Blasting LLC ("we," "us," or "our"). By using our website or engaging our services, you agree to these Terms.</p>
+
+        <h2>1. Services</h2>
+        <p>ShowMe Mobile Blasting LLC provides mobile dustless blasting and surface preparation services, including but not limited to:</p>
+        <ul>
+            <li>Automotive and trailer restoration</li>
+            <li>Residential surface cleaning and paint removal</li>
+            <li>Commercial and industrial surface prep</li>
+            <li>Marine vessel cleaning and prep</li>
+            <li>Farm equipment and heavy machinery restoration</li>
+        </ul>
+        <p>All services are performed on-location at the customer's site within our service area. We are based in Columbia, Missouri and serve the greater Midwest region.</p>
+
+        <h2>2. Quotes and Estimates</h2>
+        <p>All quotes provided via our website, phone, text, or email are estimates based on the information provided at the time of the request. Final pricing may vary based on conditions observed on-site, including but not limited to surface size, material composition, degree of corrosion or buildup, and access requirements.</p>
+        <p>A quote or estimate does not constitute a binding contract. A separate service agreement may be required for larger or commercial projects.</p>
+
+        <h2>3. Contact Form and Quote Request Submissions</h2>
+        <p>By submitting a quote request or contact form on our website, you consent to be contacted by ShowMe Mobile Blasting LLC via phone call, text message, or email in response to your inquiry. This contact is for the sole purpose of following up on your service request.</p>
+
+        <div class="highlight">
+            <p>We do not add your information to any mailing list, cold call list, or third-party marketing database. Your contact information is used exclusively to respond to your inquiry and provide you with the service you requested.</p>
+        </div>
+
+        <p>Standard message and data rates may apply for text message communications. You may opt out of text communications at any time by replying STOP.</p>
+
+        <h2>4. SMS Communications</h2>
+        <p>By checking the SMS consent box on our website forms, you agree to receive text messages from ShowMe Mobile Blasting, including quote follow-ups, appointment confirmations, and service-related updates.</p>
+        <ul>
+            <li>Msg &amp; data rates may apply</li>
+            <li>Message frequency varies</li>
+            <li>Reply STOP to unsubscribe at any time</li>
+            <li>Reply HELP for assistance</li>
+            <li>Consent is not a condition of purchase or service</li>
+        </ul>
+
+        <h2>5. Facebook and Instagram Lead Capture</h2>
+        <p>We run advertisements on Facebook and Instagram. If you fill out a lead form through one of our ads, your information is captured and used solely to contact you in response to your expressed interest in our services. This is an opt-in process. We do not contact individuals who have not taken an action indicating interest in our services.</p>
+        <p>By submitting your information through a Facebook or Instagram lead form associated with ShowMe Mobile Blasting, you consent to be contacted by us via phone, text, or email to discuss your project.</p>
+
+        <h2>6. Customer Responsibilities</h2>
+        <p>You agree to:</p>
+        <ul>
+            <li>Provide accurate information when requesting a quote or booking a service</li>
+            <li>Ensure reasonable access to the area or item to be serviced on the scheduled date</li>
+            <li>Notify us of any hazardous materials, structural concerns, or special conditions prior to service</li>
+            <li>Be available or have an authorized representative present during service, or make prior arrangements with us</li>
+        </ul>
+
+        <h2>7. Scheduling and Cancellations</h2>
+        <p>We make every effort to arrive on time for scheduled appointments. In the event of weather conditions, equipment issues, or other unforeseen circumstances, we will contact you as soon as possible to reschedule.</p>
+        <p>If you need to cancel or reschedule, please notify us at least 24 hours in advance. Repeated last-minute cancellations may result in a cancellation fee or refusal of future service.</p>
+
+        <h2>8. Payment</h2>
+        <p>Payment terms will be communicated at the time of scheduling or upon completion of the estimate. We accept cash, check, and major credit cards unless otherwise agreed. Payment is due upon completion of service unless a separate payment arrangement has been made in writing.</p>
+
+        <h2>9. Limitation of Liability</h2>
+        <p>ShowMe Mobile Blasting LLC takes care to perform all services safely and professionally. However, pre-existing damage, hidden defects, or conditions not disclosed prior to service are not our responsibility. We are not liable for damage resulting from conditions that were not reasonably visible or disclosed at the time of service.</p>
+        <p>Our total liability for any claim arising from our services shall not exceed the amount paid for the specific service giving rise to the claim.</p>
+
+        <h2>10. Website Use</h2>
+        <p>You agree to use this website for lawful purposes only. You may not use this site to transmit any content that is unlawful, harmful, threatening, or otherwise objectionable. We reserve the right to refuse service to anyone at our discretion.</p>
+
+        <h2>11. Intellectual Property</h2>
+        <p>All content on this website, including text, images, and design, is the property of ShowMe Mobile Blasting LLC or its content providers and is protected by applicable copyright and trademark law. You may not reproduce or distribute any content from this site without written permission.</p>
+
+        <h2>12. Changes to These Terms</h2>
+        <p>We may update these Terms from time to time. Changes will be posted on this page with an updated effective date. Continued use of our website or services following any changes constitutes your acceptance of the updated Terms.</p>
+
+        <h2>13. Governing Law</h2>
+        <p>These Terms are governed by the laws of the State of Missouri. Any disputes arising under these Terms shall be resolved in the courts of Boone County, Missouri.</p>
+
+        <h2>14. Contact Us</h2>
+        <p>Questions about these Terms? Reach out directly:</p>
+        <p>
+            ShowMe Mobile Blasting LLC<br>
+            720 N Grace Ln, Columbia, MO 65201<br>
+            <a href="mailto:eran@showmemobileblasting.com">eran@showmemobileblasting.com</a><br>
+            <a href="tel:5738082771">(573) 808-2771</a>
+        </p>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3>Show Me <span>Mobile Blasting</span></h3>
+                    <p>Professional mobile dustless blasting services based in Columbia, Missouri. Eco-friendly surface prep for metal, wood, masonry, fiberglass &mdash; we come to you.</p>
+                    <div class="footer-contact">
+                        720 N Grace Ln, Columbia, MO 65201<br>
+                        <a href="tel:5738082771">(573) 808-2771</a> &nbsp;|&nbsp; <a href="mailto:eran@showmemobileblasting.com">eran@showmemobileblasting.com</a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="/#services">Services</a></li>
+                        <li><a href="/#process">How It Works</a></li>
+                        <li><a href="/#about">About Us</a></li>
+                        <li><a href="/#gallery">Our Work</a></li>
+                        <li><a href="/#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="/terms.html">Terms of Service</a></li>
+                        <li><a href="/quote.html">Get a Quote</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ShowMe Mobile Blasting LLC. All rights reserved.</p>
+                <div class="footer-legal-links">
+                    <a href="/privacy-policy.html">Privacy Policy</a>
+                    <a href="/terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

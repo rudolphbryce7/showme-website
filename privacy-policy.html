@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | ShowMe Mobile Blasting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --white: #ffffff;
+            --off-white: #f7f7f7;
+            --border: #e0e0e0;
+            --mid-gray: #999999;
+            --dark-gray: #555555;
+            --dark: #333333;
+            --black: #1a1a1a;
+            --accent: #4a7a3a;
+            --accent-dark: #3a6130;
+            --accent-light: #5a9448;
+            --font-display: 'Rajdhani', sans-serif;
+            --font-body: 'Nunito Sans', sans-serif;
+        }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: var(--font-body); color: var(--dark-gray); background: var(--white); line-height: 1.7; }
+
+        /* TOP BAR */
+        .top-bar { background: var(--black); padding: 8px 0; font-size: 0.85rem; color: #ccc; }
+        .top-bar .container { display: flex; justify-content: space-between; align-items: center; }
+        .top-bar a { color: #ccc; text-decoration: none; }
+        .top-bar a:hover { color: var(--white); }
+        .top-bar-right { display: flex; gap: 20px; align-items: center; }
+        .top-bar-right a { display: flex; align-items: center; gap: 6px; }
+        .top-bar-right svg { width: 14px; height: 14px; fill: currentColor; }
+
+        /* NAV */
+        .nav { background: var(--white); padding: 0; box-shadow: 0 2px 10px rgba(0,0,0,0.06); }
+        .nav .container { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+        .nav-logo { font-family: var(--font-display); font-size: 1.6rem; font-weight: 700; text-transform: uppercase; color: var(--black); text-decoration: none; }
+        .nav-logo span { color: var(--accent); }
+        .nav-back { font-family: var(--font-display); font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); text-decoration: none; }
+        .nav-back:hover { color: var(--accent-dark); }
+
+        .container { max-width: 1080px; margin: 0 auto; padding: 0 30px; }
+
+        /* PAGE HEADER */
+        .page-header {
+            background: var(--black);
+            padding: 50px 0 40px;
+            position: relative;
+        }
+        .page-header::before {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 4px;
+            background: var(--accent);
+        }
+        .page-header h1 {
+            font-family: var(--font-display);
+            font-size: clamp(1.8rem, 3vw, 2.8rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--white);
+            letter-spacing: 1px;
+        }
+        .page-header p { color: rgba(255,255,255,0.55); font-size: 0.9rem; margin-top: 6px; }
+
+        /* CONTENT */
+        .content { max-width: 800px; margin: 0 auto; padding: 60px 30px 80px; }
+
+        h2 {
+            font-family: var(--font-display);
+            font-size: 1.15rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--black);
+            margin-top: 40px;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--accent);
+            display: inline-block;
+        }
+        p { margin-bottom: 16px; color: var(--dark-gray); }
+        ul { margin: 0 0 16px 24px; }
+        li { margin-bottom: 8px; color: var(--dark-gray); list-style: disc; }
+        a { color: var(--accent); }
+        a:hover { color: var(--accent-dark); }
+
+        .highlight {
+            background: #f0f5ee;
+            border-left: 4px solid var(--accent);
+            padding: 16px 20px;
+            margin: 24px 0;
+        }
+        .highlight p { margin: 0; }
+
+        /* FOOTER */
+        .footer { background: var(--black); color: #aaa; padding: 50px 0 0; margin-top: 80px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; padding-bottom: 40px; }
+        .footer h3 { font-family: var(--font-display); font-size: 1.3rem; font-weight: 700; text-transform: uppercase; color: var(--white); margin-bottom: 12px; }
+        .footer h3 span { color: var(--accent); }
+        .footer h4 { font-family: var(--font-display); font-size: 0.95rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--white); margin-bottom: 14px; }
+        .footer p { font-size: 0.9rem; color: #aaa; line-height: 1.7; margin-bottom: 0; }
+        .footer-contact { margin-top: 12px; font-size: 0.85rem; color: #aaa; line-height: 1.8; }
+        .footer-contact a { color: #aaa; text-decoration: none; }
+        .footer-contact a:hover { color: var(--white); }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 8px; }
+        .footer-links a { color: #aaa; text-decoration: none; font-size: 0.9rem; }
+        .footer-links a:hover { color: var(--white); }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding: 20px 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 0.85rem; }
+        .footer-bottom a { color: #aaa; text-decoration: none; }
+        .footer-bottom a:hover { color: var(--white); }
+        .footer-legal-links { display: flex; gap: 20px; }
+
+        @media (max-width: 768px) {
+            .footer-grid { grid-template-columns: 1fr; }
+            .content { padding: 40px 20px 60px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="container">
+            <span>&#9733; Veteran Owned &amp; Operated &nbsp;|&nbsp; Columbia, MO &mdash; Serving the Entire Midwest</span>
+            <div class="top-bar-right">
+                <a href="mailto:eran@showmemobileblasting.com">
+                    <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    eran@showmemobileblasting.com
+                </a>
+                <a href="tel:5738082771">
+                    <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.24 1.02l-2.2 2.2z"/></svg>
+                    (573) 808-2771
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAV -->
+    <nav class="nav">
+        <div class="container">
+            <a href="/" class="nav-logo">Show Me <span>Mobile Blasting</span></a>
+            <a href="/" class="nav-back">&larr; Back to Home</a>
+        </div>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+        <div class="container">
+            <h1>Privacy Policy</h1>
+            <p>Last updated: April 7, 2026</p>
+        </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+        <p>ShowMe Mobile Blasting LLC ("we," "us," or "our") respects your privacy. This Privacy Policy explains how we collect, use, and protect your information when you visit showmemobileblasting.com, interact with our contact forms, or engage with our business through any channel.</p>
+
+        <h2>1. Information We Collect</h2>
+        <p>We collect information you voluntarily provide when you:</p>
+        <ul>
+            <li>Fill out a quote request or contact form on our website</li>
+            <li>Interact with our live chat widget</li>
+            <li>Click on or respond to one of our Facebook or Instagram advertisements</li>
+            <li>Call, text, or email us directly</li>
+        </ul>
+        <p>The information collected may include your name, phone number, email address, location, and a description of your project or service needs.</p>
+        <p>We may also collect standard website usage data such as pages visited, time on site, browser type, and IP address through cookies and analytics tools.</p>
+
+        <h2>2. How We Use Your Information</h2>
+        <p>Information you provide is used solely to:</p>
+        <ul>
+            <li>Respond to your quote request or inquiry</li>
+            <li>Contact you to schedule a free estimate or service appointment</li>
+            <li>Follow up on your request via phone, text, or email</li>
+            <li>Improve the quality and relevance of our services</li>
+        </ul>
+        <p>We may use your phone number to send SMS communications, including marketing, transactional, and informational messages, to users who have explicitly opted in via our website forms. You may opt out at any time by replying STOP to (573) 410-4010.</p>
+
+        <div class="highlight">
+            <p><strong>We do not send mass marketing emails, add you to mailing lists, or make unsolicited sales calls to lists of contacts.</strong> We only contact people who have directly reached out to us or responded to one of our advertisements.</p>
+        </div>
+
+        <h2>3. SMS Messaging</h2>
+        <p>When you submit a form on our website and check the SMS consent box, you are opting in to receive text messages from ShowMe Mobile Blasting. These messages may include quote follow-ups, appointment confirmations, and service-related communications.</p>
+        <ul>
+            <li>Message frequency varies based on your inquiry and service status</li>
+            <li>Msg &amp; data rates may apply</li>
+            <li>Reply STOP at any time to unsubscribe</li>
+            <li>Reply HELP for assistance</li>
+            <li>Consent is not a condition of purchase</li>
+        </ul>
+
+        <h2>4. Facebook and Instagram Advertising</h2>
+        <p>We run advertisements on Facebook and Instagram to reach people in our service area who may be interested in mobile blasting services. If you click on one of our ads and fill out a form, or if you visit our website after seeing an ad, your information is collected and handled as described in this policy.</p>
+        <p>This is a lead generation process, not a marketing list operation. When you submit your information, you are opting in to be contacted by ShowMe Mobile Blasting specifically &mdash; and only in response to your expressed interest. We do not use your information for retargeting campaigns run on behalf of third parties.</p>
+        <p>Facebook and Instagram have their own privacy policies that govern how they collect and use data on their platforms. We encourage you to review <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener">Meta's Privacy Policy</a> for more information.</p>
+
+        <h2>5. Live Chat Widget</h2>
+        <p>Our website uses a live chat widget powered by GoHighLevel. When you initiate a chat, the information you provide (name, phone, email, and message) is captured and stored in our CRM so we can respond to your inquiry. This constitutes an opt-in to be contacted by us regarding your request.</p>
+
+        <h2>6. Contact Forms and Quote Requests</h2>
+        <p>When you submit a form on our website, you are opting in to be contacted by ShowMe Mobile Blasting via phone, text message, or email in response to your request. Standard message and data rates may apply for text communications. You may opt out at any time by replying STOP to any text message or by contacting us directly.</p>
+
+        <h2>7. CRM and Data Storage</h2>
+        <p>Your contact information and inquiry details are stored in GoHighLevel, a CRM platform we use to manage customer relationships and scheduling. GoHighLevel operates under its own privacy and data security standards. Your information is stored securely and is only accessible to ShowMe Mobile Blasting staff.</p>
+
+        <h2>8. Information Sharing</h2>
+        <p>We do not sell, rent, trade, or share your personal information with any third party for marketing or commercial purposes. Your information is never added to external mailing lists or shared with advertisers, data brokers, or other businesses.</p>
+        <p>We may share information only in the following limited circumstances:</p>
+        <ul>
+            <li>With service providers who assist in operating our CRM or scheduling tools, under strict data protection requirements</li>
+            <li>If required by law or in response to a valid legal process</li>
+        </ul>
+
+        <h2>9. Cookies</h2>
+        <p>Our website uses cookies and similar technologies to understand how visitors interact with our site. This information helps us improve our website experience. You can disable cookies in your browser settings, though some site features may not function as intended.</p>
+
+        <h2>10. Data Security</h2>
+        <p>We take reasonable measures to protect the information you provide. However, no method of data transmission or storage is 100% secure, and we cannot guarantee absolute security.</p>
+
+        <h2>11. Your Rights</h2>
+        <p>You have the right to request access to, correction of, or deletion of your personal information at any time. To exercise these rights, contact us at <a href="mailto:eran@showmemobileblasting.com">eran@showmemobileblasting.com</a> or by phone at <a href="tel:5738082771">(573) 808-2771</a>.</p>
+
+        <h2>12. Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated effective date. Continued use of our website following any changes constitutes your acceptance of the updated policy.</p>
+
+        <h2>13. Contact Us</h2>
+        <p>If you have questions or concerns about this Privacy Policy, reach out to us directly:</p>
+        <p>
+            ShowMe Mobile Blasting LLC<br>
+            720 N Grace Ln, Columbia, MO 65201<br>
+            <a href="mailto:eran@showmemobileblasting.com">eran@showmemobileblasting.com</a><br>
+            <a href="tel:5738082771">(573) 808-2771</a>
+        </p>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3>Show Me <span>Mobile Blasting</span></h3>
+                    <p>Professional mobile dustless blasting services based in Columbia, Missouri. Eco-friendly surface prep for metal, wood, masonry, fiberglass &mdash; we come to you.</p>
+                    <div class="footer-contact">
+                        720 N Grace Ln, Columbia, MO 65201<br>
+                        <a href="tel:5738082771">(573) 808-2771</a> &nbsp;|&nbsp; <a href="mailto:eran@showmemobileblasting.com">eran@showmemobileblasting.com</a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="/#services">Services</a></li>
+                        <li><a href="/#process">How It Works</a></li>
+                        <li><a href="/#about">About Us</a></li>
+                        <li><a href="/#gallery">Our Work</a></li>
+                        <li><a href="/#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="/terms.html">Terms of Service</a></li>
+                        <li><a href="/quote.html">Get a Quote</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ShowMe Mobile Blasting LLC. All rights reserved.</p>
+                <div class="footer-legal-links">
+                    <a href="/privacy-policy.html">Privacy Policy</a>
+                    <a href="/terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
